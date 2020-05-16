@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+  </style>
+</head>
+
+<body style="justify-content: center; text-align: center;">
+  <div class="ip">
+    <button id="button"> My IP</button>
+  </div>
+  <script>
+    var ip = "";
+    $.getJSON('http://ipinfo.io', function (data) {
+      ip = data.ip;
+      console.log(ip);
+    });
+
+    var iph = document.getElementById("IP");
+
+    $("#button").click(function () {
+      alert('you ip =' + '' + ip)
+      $("body").addClass("buuton")
+
+    });
+  </script>
+</body>
+
+</html>
